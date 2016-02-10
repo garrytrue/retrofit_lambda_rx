@@ -1,0 +1,78 @@
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".mvp.views.WeatherFragment"
+    tools:showIn="@layout/activity_main">
+
+    <EditText
+        android:id="@+id/locationQuery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/query"
+        android:inputType="text|textMultiLine|textUri">
+
+        <requestFocus />
+    </EditText>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- Header current weather-->
+    <RelativeLayout
+        android:id="@+id/rl_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/locationQuery"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/tv_location"
+            style="@style/LocationText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_temperature"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_toEndOf="@+id/im_weather"
+            tools:text="London" />
+
+        <TextView
+            android:id="@+id/tv_temperature"
+            style="@style/CurrentTemperatureText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/fab_margin"
+            android:layout_toEndOf="@+id/tv_location"
+            tools:text="25 C" />
+
+        <ImageView
+            android:id="@+id/im_weather"
+            android:layout_width="@dimen/current_temperature_text"
+            android:layout_height="@dimen/current_temperature_text"
+            android:layout_alignBottom="@+id/tv_location"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/content_weather_icon"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_header" />
+
+</RelativeLayout>

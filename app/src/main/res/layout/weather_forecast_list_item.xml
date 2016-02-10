@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/list_item_height"
+   >
+
+    <TextView
+        android:id="@+id/day"
+        style="@style/WeatherForecastListItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        tools:text="Tomorrow"
+        />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/WeatherForecastListItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/day"
+        android:layout_toEndOf="@+id/day"
+        android:layout_centerVertical="true"
+        tools:text="Sky is Clear" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/description"
+        android:id="@+id/im_list_weather"
+        android:contentDescription="@string/content_weather_icon"/>
+
+    <TextView
+        android:id="@+id/maximum_temperature"
+        style="@style/WeatherForecastListItemTextEmphasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/minimum_temperature"
+        tools:text="10"/>
+
+    <TextView
+        android:id="@+id/minimum_temperature"
+        style="@style/WeatherForecastListItemTextEmphasis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        tools:text="99" />
+
+</RelativeLayout>

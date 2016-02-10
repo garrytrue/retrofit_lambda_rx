@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RetrofitLambdaXJava</string>
+    <string name="query">City or Country code</string>
+    <string name="content_weather_icon">Weather Icon</string>
+    <string name="msg_error">Check connection and try again later</string>
+    <string name="msg_wait">Wait…</string>
+</resources>

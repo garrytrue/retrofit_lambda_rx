@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- EndPoints-->
+    <string name="base_url">http://api.openweathermap.org</string>
+    <string name="image_endpoint">http://api.openweathermap.org/img/w/%s.png</string>
+</resources>
